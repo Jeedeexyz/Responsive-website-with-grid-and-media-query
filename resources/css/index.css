@@ -270,7 +270,7 @@ body {
   opacity: .8;
   color: black;
   text-align: center;
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 2;
 }
 
@@ -281,8 +281,8 @@ body {
 }
 
 .image img {
-  height: 350px;
-  width: 350px;
+  height: 21.875rem;
+  width: 21.875rem;
 }
 
 
@@ -291,15 +291,24 @@ body {
 @media only screen and (max-width:375px) {
 .intro{
   grid-template-areas:
-  "Image image"
-  "detail  detail";
+  "image "
+  "detail ";
 }
 
 .detail {
   padding-bottom: 20%;
+  margin-bottom: 40%;
+  font-size: 14px;
+  background-color: black;
+  opacity: .8;
+  color: seashell;
 }
+
+
 .body {
   background-size: contain;
 }
+
+
 
 }
