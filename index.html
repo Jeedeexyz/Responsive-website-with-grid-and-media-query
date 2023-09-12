@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive</title>
+    <link rel="stylesheet" href="./resources/css/index.css" />
+  </head>
+  <body>
+    <div class="grid">
+      <div class="header">
+        <h1 class="title">JeeDeexyz</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="./about.html">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="home" class="aboutMe">
+        <div class="about">
+          <h1>About Me</h1>
+          <h4 class="description">
+            I am a full-stack web developer on the quest to become the best in
+            the field. I am currently building my skillset and am open to work
+            to gain experience in coorporate world. I'm working on some
+            open-source platforms to test my skills in the field.
+          </h4>
+          <h4 class="desBtn">Hit the subscribe to follow me.</h4>
+        </div>
+
+        <button class="btn" type="button">Subscribe</button>
+      </div>
+      <div id="skills" class="skill"><h2 class="skillSet">Skills</h2></div>
+
+      <div class="skill1">
+        <img src="./resources/images/front.png" alt="Frontend Picture" />
+        <h2 class="frontend">Frontend</h2>
+      </div>
+      <div class="skill2">
+        <img src="./resources/images/back.webp" alt="Backend Picture" />
+        <h2 class="backend">Backend</h2>
+      </div>
+      <div class="skill3">
+        <img src="./resources/images/Database.png" alt="Database Picture" />
+        <h2 class="database">Database</h2>
+      </div>
+      <div id="contact" class="footer">
+        <h1>Contact</h1>
+        <div class="flex">
+          <label for="name">Your Name:</label>
+          <input id="name" type="text" name="name" placeholder="Your name" />
+          <label for="email">Your Email:</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Your Em@il"
+          />
+          <textarea
+            name="Message"
+            id="message"
+            cols="20"
+            rows="3"
+            placeholder="Type your message here....."
+          ></textarea>
+          <input class="sub" type="submit" value="Submit" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

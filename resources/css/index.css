@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* grid system */
+
+.grid {
+  display: grid;
+
+  grid-template-areas:
+    " head head head"
+    " about about about"
+    " skill skill skill"
+    " skill1 skill2 skill3"
+    "footer footer footer";
+}
+
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 6px;
+  }
+
+  .grid {
+    grid-template-areas:
+      " head head"
+      " about about"
+      " skill skill"
+      " skill1 skill2"
+      " skill3 skill3"
+      "footer footer";
+  }
+
+  #contact {
+    padding-bottom: 80px;
+    padding-top: 15px;
+  }
+}
+
+/* nav bar */
+
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+  width: 100%;
+  grid-area: head;
+  background-color: #9eb384;
+  border: 1px solid #435334;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.header h1 {
+  display: flex;
+  width: 45%;
+  justify-content: start;
+  align-items: center;
+  padding-left: 1%;
+  font-size: 2.5rem;
+}
+
+.header nav {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  width: 52%;
+}
+.header li {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 4%;
+}
+
+.header ul {
+  display: inline-flex;
+  justify-content: end;
+  width: 100%;
+  font-size: 1.25rem;
+}
+.header a:visited {
+  color: black;
+}
+.header a {
+  color: black;
+  text-decoration: none;
+}
+
+/* About me section */
+
+.aboutMe {
+  position: relative;
+  top: 4.1875rem;
+  grid-area: about;
+  height: 36.5rem;
+  background-image: url("/resources/images/about.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.about {
+  height: 12.5rem;
+  width: 80%;
+  text-align: center;
+  background-color: #faf1e4;
+  opacity: 0.8;
+  padding: 1% 1%;
+  margin-bottom: 1%;
+}
+.about h4 {
+  padding: 1% 0 1%;
+}
+
+.desBtn {
+  margin-top: 3%;
+}
+
+.btn {
+  height: 8%;
+  width: 12%;
+  border-radius: 1.5625rem;
+  font-size: 1rem;
+  transition: wdith 0.15s ease-in, font-size 0.15s ease-in;
+  background-color: #7c96ab;
+}
+
+.btn:hover {
+  background-color: #9bcdd2;
+  color: white;
+  width: 14%;
+  font-size: 1.25rem;
+}
+
+/* skils section */
+
+.skill {
+  grid-area: skill;
+}
+.skill1 {
+  text-align: center;
+  position: relative;
+  grid-area: skill1;
+  margin-top: 1%;
+  padding-top: 2%;
+}
+
+.skill1 img,
+.skill2 img,
+.skill3 img {
+  height: 10rem;
+  width: 20rem;
+  margin: 1%;
+  border: 2px solid #9eb384;
+  border-radius: 0.625rem;
+}
+
+.skill2 {
+  text-align: center;
+  grid-area: skill2;
+  margin-top: 1%;
+}
+.skill3 {
+  text-align: center;
+  grid-area: skill3;
+  margin-top: 1%;
+}
+
+.skill {
+  position: relative;
+  top: 2.2rem;
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+/* contact section */
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  margin-top: 2%;
+  height: 27.5rem;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex label,
+.flex input {
+  margin: 0.25%;
+  font-size: 1rem;
+  height: 1.6rem;
+}
+.flex input {
+  background-color: #faf1e4;
+  border-radius: 25px;
+  width: 16rem;
+}
+.flex label {
+  font-weight: bold;
+  margin-top: 2%;
+}
+
+.flex .sub {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 25px;
+  transition: width 0.15s ease-in, font-size 0.15s ease-in;
+}
+
+.flex .sub:hover {
+  background-color: #9bcdd2;
+  color: white;
+  width: 8rem;
+  font-size: 1.25rem;
+}
+
+.flex textarea {
+  width: 55%;
+  margin: 2% 0;
+}
+
+/* About Page */
+
+body {
+  background-image: url("/resources/images/about\ background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro {
+  display: grid;
+
+  grid-template-areas:
+    "Image  detail"
+    "image  detail";
+
+  margin-top: 15%;
+}
+
+.detail {
+  grid-area: detail;
+  background-color: #F9F5EB;
+  opacity: .8;
+  color: black;
+  text-align: center;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.image {
+  grid-area: image;
+  text-align: center;
+
+}
+
+.image img {
+  height: 350px;
+  width: 350px;
+}
+
+
+/* mobile responsive */
+
+@media only screen and (max-width:375px) {
+.intro{
+  grid-template-areas:
+  "Image image"
+  "detail  detail";
+}
+
+.detail {
+  padding-bottom: 20%;
+}
+.body {
+  background-size: contain;
+}
+
+}
