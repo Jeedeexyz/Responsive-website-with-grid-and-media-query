@@ -1,0 +1,126 @@
+  /* for 600px */
+
+  
+    .grid {
+      grid-template-areas:
+        " head head"
+        " about about"
+        " skill skill"
+        "img-container img-container"
+        "footer footer";
+    }
+     .header .icon {
+      display: flex;
+    font-size: 1.2vw;
+    }
+  
+    .header nav {
+      display: none;
+    }
+  
+    .header h1 {
+      font-size: 6vw;
+    }
+
+
+
+    /* about section */
+
+    .aboutMe {
+      top: 13vh;
+      font-size: 2.25vw;
+    }
+
+    .btn {
+      height: 10%;
+      width: 14%;
+      font-size: 2vw;
+      transition: width .15s ease-in, font-size .15s ease-in;
+    }
+
+
+    .btn:hover {
+      font-size: 2.15vw;
+      width: 17%;
+    }
+
+    /* skills section  */
+
+    .skill1 img, .skill2 img, .skill3 img {
+      height: 30vw;
+      width: 50vw;
+    }
+
+    .skill {
+      font-size: 2.75vw;
+    }
+
+      .img-container {
+        font-size: 2.25vw;
+      }
+
+
+      /* contact section */
+      
+
+      .flex input, .message textarea {
+        width: 30%;
+        padding: 2% 3%;
+        margin: 3% 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+      .message {
+        margin: 2.5% 0;
+      }
+
+      .flex label, .message {
+        font-size: 2.85vw;
+        font-weight: 600;
+      }
+
+      .message label {
+        padding: 0 .5%;
+      }
+
+      .sub {
+        width: 18vw;
+        height: 7vw;
+        font-size: 2.25vw;
+      }
+
+      .sub:hover {
+        font-size: 2.5vw;
+        width: 20vw;
+      }
+  
+    #contact {
+      padding-bottom: 260px;
+      padding-top: 15px;
+    }
+
+
+  /* about page */
+
+    .intro{
+      grid-template-areas:
+      "image "
+      "detail ";
+    }
+    
+    .detail {
+      padding-bottom: 20%;
+      margin-bottom: 40%;
+      font-size: 14px;
+      background-color: black;
+      opacity: .8;
+      color: white;
+    }
+    
+    
+    .body {
+      background-size: contain;
+    }
+    
+    
+    

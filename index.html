@@ -4,20 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/index.css" />
+    <link rel="stylesheet" href="./resources/css/mobile.css" media="only screen and (max-width:600px)">
   </head>
   <body>
     <div class="grid">
       <div class="header">
         <h1 class="title">JeeDeexyz</h1>
         <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="./about.html">About Me</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+            <h4><a href="#home">Home</a></h4>
+            <h4><a href="#skills">Skills</a></h4>
+            <h4><a href="./about.html">AboutMe</a></h4>
+            <h4><a href="#contact">Contact</a></h4>
+          
+        
         </nav>
+        <div class="icon">
+        <i class="ri-menu-3-line"></i>
+      </div>
       </div>
 
       <div id="home" class="aboutMe">
@@ -35,7 +40,7 @@
         <button class="btn" type="button">Subscribe</button>
       </div>
       <div id="skills" class="skill"><h2 class="skillSet">Skills</h2></div>
-
+<div class="img-container">
       <div class="skill1">
         <img src="./resources/images/front.png" alt="Frontend Picture" />
         <h2 class="frontend">Frontend</h2>
@@ -48,11 +53,16 @@
         <img src="./resources/images/Database.png" alt="Database Picture" />
         <h2 class="database">Database</h2>
       </div>
+    </div>
       <div id="contact" class="footer">
         <h1>Contact</h1>
         <div class="flex">
+      
+            <div class="name">
           <label for="name">Your Name:</label>
           <input id="name" type="text" name="name" placeholder="Your name" />
+        </div>
+        <div class="email">
           <label for="email">Your Email:</label>
           <input
             id="email"
@@ -60,15 +70,26 @@
             name="email"
             placeholder="Your Em@il"
           />
+        </div>
+      </div>
+          <div class="message">
+            <label id="msg" for="message">Your Message:</label>
           <textarea
             name="Message"
             id="message"
-            cols="20"
-            rows="3"
-            placeholder="Type your message here....."
+            cols="30"
+            rows="2"
+            placeholder="Message....."
           ></textarea>
+        </div>
+          <div class="submit">
           <input class="sub" type="submit" value="Submit" />
         </div>
+        
+        <div class="made">
+          <h4>Made by ❤️ copyright Jedeexyz.</h4>
+        </div>
+       
       </div>
     </div>
   </body>

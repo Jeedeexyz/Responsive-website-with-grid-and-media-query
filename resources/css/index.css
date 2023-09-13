@@ -1,11 +1,6 @@
 * {
   margin: 0;
 }
-
-html {
-  font-size: 16px;
-}
-
 /* grid system */
 
 .grid {
@@ -15,30 +10,11 @@ html {
     " head head head"
     " about about about"
     " skill skill skill"
-    " skill1 skill2 skill3"
+    " img-container img-container img-container"
     "footer footer footer";
 }
 
-@media only screen and (max-width: 375px) {
-  html {
-    font-size: 6px;
-  }
 
-  .grid {
-    grid-template-areas:
-      " head head"
-      " about about"
-      " skill skill"
-      " skill1 skill2"
-      " skill3 skill3"
-      "footer footer";
-  }
-
-  #contact {
-    padding-bottom: 80px;
-    padding-top: 15px;
-  }
-}
 
 /* nav bar */
 
@@ -47,8 +23,8 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-bottom: 1%;
   width: 100%;
+  height: 60px;
   grid-area: head;
   background-color: #9eb384;
   border: 1px solid #435334;
@@ -58,31 +34,27 @@ html {
 
 .header h1 {
   display: flex;
-  width: 45%;
   justify-content: start;
   align-items: center;
   padding-left: 1%;
-  font-size: 2.5rem;
+  font-size: 2vw;
+  width: 49vw;
 }
 
 .header nav {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  width: 52%;
+  justify-content: end;
+  width: 50vw;
 }
-.header li {
+.header h4 {
   display: inline-flex;
   flex-direction: row;
-  padding: 4%;
+  padding: 0 4%;
+  font-size: 1.5vw;
 }
 
-.header ul {
-  display: inline-flex;
-  justify-content: end;
-  width: 100%;
-  font-size: 1.25rem;
-}
 .header a:visited {
   color: black;
 }
@@ -91,13 +63,19 @@ html {
   text-decoration: none;
 }
 
+.header i {
+  font-size: 1.5vw;
+  font-weight: 600;
+  display: none;
+}
+
 /* About me section */
 
 .aboutMe {
   position: relative;
-  top: 4.1875rem;
+  top: 11vh;
   grid-area: about;
-  height: 36.5rem;
+  height: 70vh;
   background-image: url("/resources/images/about.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -107,12 +85,12 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.25vw;
 }
 
 .about {
-  height: 12.5rem;
-  width: 80%;
+  height: 45%;
+  width: 60%;
   text-align: center;
   background-color: #faf1e4;
   opacity: 0.8;
@@ -120,18 +98,18 @@ html {
   margin-bottom: 1%;
 }
 .about h4 {
-  padding: 1% 0 1%;
+  padding: 1% 12% 1%;
 }
 
 .desBtn {
-  margin-top: 3%;
+  margin-top: 1%;
 }
 
 .btn {
   height: 8%;
   width: 12%;
-  border-radius: 1.5625rem;
-  font-size: 1rem;
+  border-radius: 25px;
+  font-size: 1.25vw;
   transition: wdith 0.15s ease-in, font-size 0.15s ease-in;
   background-color: #7c96ab;
 }
@@ -140,62 +118,73 @@ html {
   background-color: #9bcdd2;
   color: white;
   width: 14%;
-  font-size: 1.25rem;
+  font-size: 1.5vw;
+  
 }
 
 /* skils section */
+.img-container {
+  grid-area: img-container;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.25vw;
+}
 
 .skill {
   grid-area: skill;
 }
 .skill1 {
   text-align: center;
-  position: relative;
-  grid-area: skill1;
   margin-top: 1%;
-  padding-top: 2%;
 }
 
 .skill1 img,
 .skill2 img,
 .skill3 img {
-  height: 10rem;
-  width: 20rem;
+  height: 16vw;
+  width: 27vw;
   margin: 1%;
   border: 2px solid #9eb384;
-  border-radius: 0.625rem;
+  border-radius: 10px;
 }
 
 .skill2 {
   text-align: center;
-  grid-area: skill2;
   margin-top: 1%;
 }
 .skill3 {
   text-align: center;
-  grid-area: skill3;
   margin-top: 1%;
 }
 
 .skill {
-  position: relative;
-  top: 2.2rem;
-  height: 6rem;
+z-index: 1;
+margin-top: 80px;
+margin:80px 0 20px ;
+  height: 4vw;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.5vw;
 }
 
 /* contact section */
+
+.footer h1 {
+  margin: 2% 0;
+
+}
 
 .footer {
   grid-area: footer;
   text-align: center;
   margin-top: 2%;
-  height: 27.5rem;
+  height: 35vw;
   background: rgb(34, 193, 195);
   background: linear-gradient(
     0deg,
@@ -208,47 +197,76 @@ html {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }
-.flex label,
-.flex input {
-  margin: 0.25%;
-  font-size: 1rem;
-  height: 1.6rem;
-}
-.flex input {
-  background-color: #faf1e4;
-  border-radius: 25px;
-  width: 16rem;
-}
-.flex label {
-  font-weight: bold;
-  margin-top: 2%;
+
+.name, .email, .message {
+  width: 100%;
 }
 
-.flex .sub {
-  width: 6rem;
-  height: 3rem;
+.flex input, .flex label {
+  padding: 0% 2%;
+
+}
+
+.flex label, .message {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+   
+}
+
+.message label {
+  padding: 0 1.5%;
+}
+
+ .sub {
+  width: 7vw;
+  height: 3vw;
+  font-size: 1.35vw;
   border-radius: 25px;
   transition: width 0.15s ease-in, font-size 0.15s ease-in;
 }
 
-.flex .sub:hover {
+.sub:hover {
   background-color: #9bcdd2;
   color: white;
-  width: 8rem;
-  font-size: 1.25rem;
+  width: 8vw;
+  font-size: 1.5vw;
 }
 
-.flex textarea {
-  width: 55%;
-  margin: 2% 0;
+
+input::placeholder , textarea::placeholder {
+  font-weight: bold;
+  color: black;
+}
+
+.flex input, .message textarea {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+
+.made {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin: 7% auto 3% 1.5%;
 }
 
 /* About Page */
 
-body {
+.about-page {
   background-image: url("/resources/images/about\ background.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -288,27 +306,4 @@ body {
 
 /* mobile responsive */
 
-@media only screen and (max-width:375px) {
-.intro{
-  grid-template-areas:
-  "image "
-  "detail ";
-}
 
-.detail {
-  padding-bottom: 20%;
-  margin-bottom: 40%;
-  font-size: 14px;
-  background-color: black;
-  opacity: .8;
-  color: seashell;
-}
-
-
-.body {
-  background-size: contain;
-}
-
-
-
-}
